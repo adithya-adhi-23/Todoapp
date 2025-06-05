@@ -1,0 +1,102 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+    margin:0;
+}
+
+.container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    margin:0 auto;
+    top:25vh
+}
+
+.container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.namebox,
+.emailform,
+.password {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.namebox:focus,
+.emailform:focus,
+.password:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.namebox::placeholder,
+.emailform::placeholder,
+.password::placeholder {
+    color: #9ca3af;
+}
+
+.submitbutton {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.submitbutton:hover {
+    background: linear-gradient(135deg, #2b2866 0%, #7c3aed 100%);
+    transform: translateY(-2px);
+}
+
+.submitbutton:active {
+    transform: translateY(0);
+}
+
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #2e2b53;
+    text-decoration: underline;
+}
+
+
+.container {
+    position: relative;
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+}
