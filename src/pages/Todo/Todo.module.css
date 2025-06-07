@@ -160,7 +160,16 @@
   text-decoration: line-through;
   color:#7016e6;
 }
-/* Responsive styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.inputfield {
+  
+  min-width: 0; /* prevent overflow */
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .maincontainer {
     padding: 20px 10px;
@@ -170,10 +179,12 @@
     flex-direction: column;
     gap: 10px;
     padding: 1rem;
+    /* flex-wrap is optional here since column flex won't overflow */
   }
 
   .inputfield {
     width: 100%;
+    min-width: 0;
   }
 
   .formcontainer button {
@@ -214,10 +225,7 @@
 
 @media (max-width: 480px) {
   .formcontainer {
-    max-width: 90%;
-  }
-
-  .Todocontainer {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 1rem;
   }
 }
