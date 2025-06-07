@@ -30,7 +30,7 @@ const storeData= ()=>{
   navigate('/todo');
 }
 else{ 
-  alert("Login faied")
+  alert("Login failed")
 }
  
 }

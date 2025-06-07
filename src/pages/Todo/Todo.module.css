@@ -1,0 +1,165 @@
+.maincontainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.formcontainer {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.inputfield {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputfield:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.formcontainer button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #6264d7 0%, #835ed9 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formcontainer button:hover {
+  background: linear-gradient(135deg, #2b2866 0%, #7c3aed 100%);
+  transform: translateY(-2px);
+}
+
+.Todocontainer {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.todo:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: scale(1.01);
+}
+
+.checkboxontainer {
+  width: 18px;
+  height: 18px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.text {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.todo.completed .text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.deletebtn {
+  background-color: #6366f1;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.deletebtn:hover {
+  background-color: #4f46e5;
+  transform: scale(1.1);
+}
+
+.logoutBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6264d7 0%, #835ed9 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.logoutBtn:hover {
+  background: linear-gradient(135deg, #2b2866 0%, #7c3aed 100%);
+  transform: translateY(-2px);
+}
+.userName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4f46e5; /* matches your primary theme */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #a5b4fc, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInSlide 0.8s ease-in-out;
+}
+
+/* Optional flair */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.strike{
+  text-decoration: line-through;
+  color:#4c135e;
+}

@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import styles from "./Signup.module.css"
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
+
 
 const Signup = () => {
   const [userData,setUserdata] = useState({
@@ -8,7 +9,7 @@ const Signup = () => {
     email:"",
     password:"",
 });
-
+const navigate = useNavigate();
 const storeData= ()=>{
   //for multi users accessibility
   let userDatas = JSON.parse(localStorage.getItem("userDatas"))//getting from localstorage 
@@ -17,12 +18,16 @@ const storeData= ()=>{
   }
   if(userDatas.some((obj)=>obj.email == userData.email)){
     alert("Already exists")
-  return
+    return
+    
+ 
 }
   userDatas.push(userData)
   localStorage.setItem("userDatas",JSON.stringify(userDatas))
- 
+  
+  navigate('/login')
 }
+
 
   return (
    
