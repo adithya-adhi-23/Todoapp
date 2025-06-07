@@ -5,10 +5,10 @@ import { BsTrash3 } from "react-icons/bs";
 import { v4 as uuidv4 } from 'uuid';
 
 const Todo = () => {
-  const [currentUser, setcurrentUser] = useState(
-    JSON.parse(localStorage.getItem("loggedInUser")),
-
-  )
+  const [currentUser, setcurrentUser] = useState(()=>{
+    let user = localStorage.getItem("loggedInUser");
+     return user ? JSON.parse(user):null;
+ });
   const [userTodos, setUserTodos] = useState([])
   const navigate = useNavigate();
   const [currentTodo, setCurrentTodo] = useState(
@@ -21,20 +21,21 @@ const Todo = () => {
 
   useEffect(() => {
 
-    if (!localStorage.getItem("loggedInUser"))
+    if (!localStorage.getItem("loggedInUser")){
       navigate('/login'); 
+    return;}
 
     let todoData = JSON.parse(localStorage.getItem("todoData"))
     if (!todoData) {
       todoData = {};
       localStorage.setItem("todoData", JSON.stringify({}));
     }
-
+    if(currentUser){
     let localUserTodos = todoData[currentUser.email]
     if (localUserTodos) {
       setUserTodos(localUserTodos);
-    }
-  }, []
+    }}
+  }, [navigate]
   );
   const updateTodo=() =>{
      if(currentTodo.title.trim() == ""){
@@ -75,8 +76,8 @@ const Todo = () => {
   }
    
   return (
-    <>
-      <p className={styles.userName}>{currentUser.name.charAt(0).toUpperCase() + currentUser.name.slice(1)}'s Todos </p>
+    <>{currentUser&&(
+      <p className={styles.userName}>{currentUser.name.charAt(0).toUpperCase() + currentUser.name.slice(1)}'s Todos </p>)}
       <div className={styles.maincontainer}>
         <div className={styles.formcontainer}>
 

@@ -8,9 +8,15 @@ import {
 } from "react-router-dom";
 import Login from './pages/Login/Login.jsx';
 import Signup from './pages/Signup/Signup.jsx';
-import Todo from './pages/Todo/Todo.jsx'
+import Todo from './pages/Todo/Todo.jsx';
+import Home from './pages/Home/Home.jsx';
 
 const router = createBrowserRouter([
+     {
+    path: "/",
+    element: <Home/>
+    
+  },
   {
     path: "/login",
     element: <Login/>
@@ -23,12 +29,7 @@ const router = createBrowserRouter([
     path: "/todo",
     element: <Todo/>
   },
-     {
-    path: "/",
-    element: 
-      <div> Home page </div>
-    
-  },
+  
 ]);
 
 createRoot(document.getElementById("root")).render(
