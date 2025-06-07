@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 .formContainer {
     display: flex;
     justify-content: center;
@@ -32,6 +33,7 @@
     margin-bottom: 1.2rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
+     font-family: "Roboto Slab", serif;
     font-size: 1rem;
     transition: all 0.3s ease;
     box-sizing: border-box;
@@ -58,6 +60,7 @@
     color: white;
     border: none;
     border-radius: 8px;
+     font-family: "Roboto Slab", serif;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -66,7 +69,7 @@
 }
 
 .submitbutton:hover {
-    background: linear-gradient(135deg, #2b2866 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #332f8b 0%, #7c3aed 100%);
     transform: translateY(-2px);
 }
 
@@ -81,6 +84,7 @@
     color: #6366f1;
     text-decoration: none;
     font-size: 1rem;
+     font-family: "Roboto Slab", serif;
     transition: color 0.3s ease;
 }
 
@@ -100,13 +104,13 @@
         padding: 1.5rem;
     }
 }
-/* Your existing styles remain unchanged */
+
 
 @media (max-width: 768px) {
   .formContainer {
     padding: 15px;
-    height: auto;          /* Let height adjust naturally */
-    min-height: 100vh;     /* Maintain min height */
+    height: auto;          
+    min-height: 100vh;    
   }
 
   .container {
@@ -132,11 +136,13 @@
   .emailform,
   .password {
     padding: 12px;         /* Smaller input padding */
-    font-size: 0.9rem;     /* Smaller font */
+    font-size: 0.9rem;  
+     font-family: "Roboto Slab", serif;   /* Smaller font */
   }
 
   .submitbutton {
     padding: 12px;
     font-size: 0.9rem;
+     font-family: "Roboto Slab", serif;
   }
 }

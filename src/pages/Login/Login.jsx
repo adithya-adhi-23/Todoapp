@@ -59,7 +59,7 @@ else{
     placeholder='Enter your password'
     className={styles.password} />
     <button className={styles.submitbutton} onClick={storeData}>Login</button>
-    <Link to = '/signup' className={styles.link}>Dont have an account? Signup Now!</Link>
+    <Link to = '/signup' className={styles.link}>Don't have an account? Signup Now!</Link>
     </div>
      </div>
     

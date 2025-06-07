@@ -20,8 +20,8 @@ const Home = () => {
        
         <h1 className={styles.main}>Todo</h1>
          <div className={styles.buttonContainer}>
-        <button className={styles.loginbtn}onClick={loginNow}>Login now</button>
-        <button className={styles.signupbtn}onClick={handleSignup}>Signup</button>
+        <button className={styles.loginbtn}onClick={loginNow}>Login</button>
+        <button className={styles.signupbtn}onClick={handleSignup}>Sign Up</button>
     </div>
     </div>
     </div>
