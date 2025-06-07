@@ -100,3 +100,43 @@
         padding: 1.5rem;
     }
 }
+/* Your existing styles remain unchanged */
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 15px;
+    height: auto;          /* Let height adjust naturally */
+    min-height: 100vh;     /* Maintain min height */
+  }
+
+  .container {
+    max-width: 90%;        /* Use most of the screen width */
+    padding: 2rem;         /* Slightly reduced padding */
+    margin-top: 10vh;      /* Space from top */
+  }
+
+  .submitbutton {
+    font-size: 0.95rem;    /* Slightly smaller font */
+    padding: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;       /* Full width on small screens */
+    padding: 1.2rem;       /* Smaller padding */
+    border-radius: 10px;   /* Slightly smaller rounding */
+  }
+
+  .namebox,
+  .emailform,
+  .password {
+    padding: 12px;         /* Smaller input padding */
+    font-size: 0.9rem;     /* Smaller font */
+  }
+
+  .submitbutton {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
