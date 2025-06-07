@@ -12,6 +12,20 @@ const Signup = () => {
 const navigate = useNavigate();
 const storeData= ()=>{
   //for multi users accessibility
+if(!userData.email ||!userData.name ||! userData.password){
+  alert("Fill out the required fields")
+  return;
+}
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(userData.email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (userData.password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
   let userDatas = JSON.parse(localStorage.getItem("userDatas"))//getting from localstorage 
   if(!userDatas){
     userDatas = []
@@ -26,8 +40,8 @@ const storeData= ()=>{
   localStorage.setItem("userDatas",JSON.stringify(userDatas))
   
   navigate('/login')
-}
 
+}
 
   return (
    
@@ -63,7 +77,7 @@ const storeData= ()=>{
     placeholder='Enter your password'
     className={styles.password} />
     <button className={styles.submitbutton} onClick={storeData}>SignUp</button>
-    <Link to = '/login' className={styles.link}>Already have an account? LoginNow!</Link>
+    <Link to = '/login' className={styles.link}>Already have an account? Login Now!</Link>
     </div>
      </div>
     

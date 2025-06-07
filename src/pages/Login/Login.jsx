@@ -18,6 +18,20 @@ const navigate = useNavigate();
   })
 
 const storeData= ()=>{
+  if(!userData.email ||! userData.password){
+  alert("Fill out the required fields")
+  return;
+}
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(userData.email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (userData.password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
   //for multi users accessibility
   let userDatas = JSON.parse(localStorage.getItem("userDatas"))//getting from localstorage 
   if(!userDatas){
